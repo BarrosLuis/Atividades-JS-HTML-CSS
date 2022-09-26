@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identidade</title>
+</head>
+<body>
+    Insira o seu país de origem: <input type="text" name="human" id="human">
+    <input type="button" value="Verificar" onclick="pesquisa()">
+    <div id="search"></div>
+    <script >
+        function pesquisa() {
+            var search = window.document.querySelector('Input#human')
+            var res = window.document.querySelector('div#search')
+            var pesq = String(search.value)
+            res.innerHTML = `País: <strong>${pesq}</strong>.</p>`
+            if (pesq == "Brasil" ) {
+                res.innerHTML += 'Você é brasileiro!'
+            }else {
+                res.innerHTML += 'Você é estrangeiro!'
+            }
+
+
+
+        }
+
+    </script>
+
+</body>
+</html>
